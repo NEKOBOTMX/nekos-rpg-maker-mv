@@ -1,0 +1,21 @@
+{
+  "name": "nekos",
+  "version": "1.0.0",
+  "description": "Elegant local RPG Maker MV JSON decoder.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "keywords": [
+    "rpg-maker-mv",
+    "json",
+    "decoder"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.2"
+  }
+}

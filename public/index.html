@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nekos</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="rail" aria-label="Nekos">
+        <div class="mark">N</div>
+        <div>
+          <p class="eyebrow" data-i18n="eyebrow">RPG Maker MV</p>
+          <h1>Nekos</h1>
+          <p class="signature">by nekobot</p>
+        </div>
+        <select id="language" class="language" aria-label="Language">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="ja">Japanese</option>
+        </select>
+      </aside>
+
+      <section class="workspace">
+        <header class="topline">
+          <div>
+            <p class="kicker" data-i18n="kicker">Decodificador local</p>
+            <h2 data-i18n="title">Devuelve tus JSON a formato legible</h2>
+          </div>
+          <span id="serverState" class="status-dot" data-i18n="ready">Listo</span>
+        </header>
+
+        <section class="panel control-panel" aria-labelledby="pathTitle">
+          <div>
+            <h3 id="pathTitle" data-i18n="pathTitle">Carpeta del juego</h3>
+            <p data-i18n="pathHint">Pega la ruta del directorio www o directamente la carpeta data.</p>
+          </div>
+          <label class="field">
+            <span data-i18n="sourcePath">Ruta origen</span>
+            <input id="sourcePath" type="text" spellcheck="false" placeholder="C:\Users\...\game\www">
+          </label>
+          <label class="field compact">
+            <span data-i18n="outputName">Carpeta de salida</span>
+            <input id="outputName" type="text" value="data_decoded" spellcheck="false">
+          </label>
+          <div class="actions">
+            <button id="scanButton" class="ghost" type="button" data-i18n="scan">Escanear</button>
+            <button id="decodeButton" type="button" data-i18n="decode">Decodificar</button>
+            <button id="encryptButton" type="button" data-i18n="encrypt">Encriptar</button>
+            <button id="patchButton" class="ghost danger" type="button" data-i18n="patchManager">Limpiar manager</button>
+          </div>
+        </section>
+
+        <section class="panel notice-panel">
+          <div>
+            <h3 data-i18n="managerTitle">rpg_managers.js</h3>
+            <p data-i18n="managerHint">Quita el loader protegido y restaura la carga normal de JSON. Usa esto despues de poner JSON legibles en www/data.</p>
+          </div>
+        </section>
+
+        <section class="grid">
+          <article class="panel">
+            <h3 data-i18n="summary">Resumen</h3>
+            <dl class="metrics">
+              <div>
+                <dt data-i18n="files">Archivos</dt>
+                <dd id="metricFiles">-</dd>
+              </div>
+              <div>
+                <dt data-i18n="wrapped">Protegidos</dt>
+                <dd id="metricWrapped">-</dd>
+              </div>
+              <div>
+                <dt data-i18n="plain">Planos</dt>
+                <dd id="metricPlain">-</dd>
+              </div>
+              <div>
+                <dt data-i18n="errors">Errores</dt>
+                <dd id="metricErrors">-</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="panel">
+            <h3 data-i18n="activity">Actividad</h3>
+            <div id="log" class="log" aria-live="polite"></div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <h3 data-i18n="preview">Vista previa</h3>
+          <div id="sampleList" class="sample-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
