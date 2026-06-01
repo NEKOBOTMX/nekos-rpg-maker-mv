@@ -1,6 +1,6 @@
 # Nekos
 
-Nekos by nekobot is a small Tauri desktop app for restoring protected RPG Maker MV JSON files to readable JSON.
+Nekos is a small Tauri desktop app for restoring protected RPG Maker MV JSON files to readable JSON.
 
 ## Desktop app
 
